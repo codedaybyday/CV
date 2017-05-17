@@ -31,11 +31,30 @@ jQuery(document).ready(function($) {
     
 
     var portrait_modal = $('[data-remodal-id=portrait-modal]').remodal();
+    var url_modal = $('[data-remodal-id=url-modal]').remodal();
     $(".portrait").click(function(event) {
         portrait_modal.open();
     });
     $('[data-remodal-id=portrait-modal] button').click(function(event) {
         $(".portrait").css('background-image', 'url("{0}")'.format($("#avatar-url").val()));
+    });
+    var lastDOM = null;
+    $('*').dblclick(function(event) {
+        lastDOM = $(this);
+        url_modal.open();
+        if($(this).parent().hasClass('url-link')){
+            $('#url').val($(this).parent().attr('href'));
+        }
+        event.stopPropagation();
+        return false;
+    });
+    $('[data-remodal-id=url-modal] button').click(function(event) {
+        console.log(lastDOM)
+        if($.trim($('#url').val())){
+            lastDOM.html('<a class="link-url" target="_blank" href="'+$('#url').val()+'">'+lastDOM.html()+'</a>');
+        }else{
+            lastDOM.html(lastDOM.text());
+        }
     });
     var weixin_modal = $('[data-remodal-id=weixin-modal]').remodal();
     $(".weixin").click(function(event) {
