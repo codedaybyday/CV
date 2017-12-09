@@ -47,7 +47,7 @@ span {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 0; 
+    margin: 0;
 }
 
 h1, h2, h3, h4, h5 {
@@ -105,7 +105,7 @@ hr {
     font-size: 20px;
     padding: 6px;
     color: #666;
-    
+
 }
 
 .remodal-img button {
@@ -172,7 +172,7 @@ progress::-moz-progress-value {
 
 .weixin{
     margin-top: 20px;
-    background-color: #e0eaf0;   
+    background-color: #e0eaf0;
     position: relative;
     padding-top: 40px;
     //padding-bottom: 40px;
@@ -205,24 +205,25 @@ progress::-moz-progress-value {
 .container {
     position: relative;
     margin: 0 auto;
-
-    width: 1050px;
+    overflow: hidden;
+    width: 1200px;
     //height: 1550px;
     background-color: white;
 
 }
 
 .side {
-    position: absolute;
+    // position: absolute;
+    float: left;
     width: 360px;
-    height: 100%;
+    // height: 100%;
     background-color: whitesmoke;
     padding-left: 20px;
     padding-right: 20px;
 }
 
 .main {
-    
+
     position: relative;;
     margin-left: 360px;
     min-height: 100%;
@@ -246,7 +247,7 @@ progress::-moz-progress-value {
     margin-right: 2px;
     visibility: hidden;
     cursor: pointer;
-    
+
 }
 
  .item-remove {
@@ -255,7 +256,7 @@ progress::-moz-progress-value {
     margin-right: 2px;
     visibility: hidden;
     cursor: pointer;
-    
+
 }
 
 ul li{
@@ -269,7 +270,7 @@ ul li{
     margin-right: 2px;
     visibility: hidden;
     cursor: pointer;
-    
+
 }
 
  .stack-list .item-remove {
@@ -279,7 +280,7 @@ ul li{
     margin-right: 2px;
     visibility: hidden;
     cursor: pointer;
-    
+
 }
 
 
